@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h4>Authorize</h4>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+            <form novalidate method="POST" action="/authorize">
+                <div class="form-group">
+                    <label for="client-id">Client ID</label>
+                    <input type="text" class="form-control" id="client-id" name="client-id"
+                           placeholder="123e4567-e89b-12d3-a456-426655440000">
+                </div>
+                <div class="form-group">
+                    <label for="client-secret">Client Secret</label>
+                    <input type="password" class="form-control" id="client-secret" name="client-secret"
+                           placeholder="">
+                    <small class="form-text text-muted">Contact us for your Client ID and secret.</small>
+                </div>
+
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">Authorize</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

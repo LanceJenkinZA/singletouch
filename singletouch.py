@@ -96,4 +96,4 @@ def upload():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=44396)
+    app.run(host="localhost", debug=True, port=44396)
